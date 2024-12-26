@@ -5,7 +5,6 @@ import "../Styles/main.css"
 
 function Navbar () {
     const navRef = useRef();
-    const animationRef = useRef();
 
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
@@ -13,7 +12,13 @@ function Navbar () {
 
     return (
         <header>
-            <h3>BUKE</h3>
+            <Link to="/">
+                <img
+                    src={"/BUKELogo.png"}
+                    alt="BUKE Logo"
+                    className="navbar-logo"
+                />
+            </Link>
             <nav ref={navRef}>
                 <Link to="/" onClick={showNavbar}>Home</Link>
                 <Link to="/menu" onClick={showNavbar}>Menu</Link>

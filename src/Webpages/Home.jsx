@@ -1,10 +1,12 @@
 import React from "react";
-import HomePageVideo from "../Components/HomePageVideo"; // Match the exact casing
+import HomePageVideo from "../Components/HomePageVideo"; 
+import ScrollingAnimation from "../Components/ScrollingAnimation";
 
 function Home() {
     return (
         <div>
             <HomePageVideo />
+            <ScrollingAnimation />
         </div>
     );
 }

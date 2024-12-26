@@ -27,10 +27,12 @@ header {
     color: var(--textColor);
 }
 
-header h3 {
-    font-size: 2.5rem;
-    margin-left: 1rem;
-    line-height: 1;
+.navbar-logo {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 188px;
+    height: auto;
+    cursor: pointer;
 }
 
 header nav {
@@ -168,6 +170,11 @@ header .nav-btn {
     z-index: 10; 
 }
 
+.sloganImage{
+    width: 350px;
+    height: auto;
+}
+
 .slogan.visible {
     opacity: 1; 
     animation: slideDownToCenter 1s ease-in-out forwards; 
@@ -199,5 +206,36 @@ header .nav-btn {
     }
     to {
         transform: translate(-50%, -50%); 
+    }
+}
+
+/* Inifinite Scrolling Animation Styling */
+.infiniteScroll {
+    font-size: 88px;
+    padding-block: 8px;
+    border-block: 1px solid;
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 88px;
+    display: flex;
+    gap: var(--gap);
+}
+
+.infiniteScroll ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    
+    animation: scroll 120s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
     }
 }

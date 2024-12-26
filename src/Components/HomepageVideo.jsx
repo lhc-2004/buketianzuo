@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import BakeryVideo from "../assets/BakeryVideoToBeReplace.mp4";
+import BUKETianZuoLogo from "../assets/BUKETianZuoLogo.png"
 
 function HomepageVideo() {
     const videoRef = useRef(null);
@@ -45,7 +46,8 @@ function HomepageVideo() {
             <video ref={videoRef} src={BakeryVideo} autoPlay loop muted />
             <div ref={overlayRef} className="blackOverlay"></div>
             <div ref={sloganRef} className="slogan">
-                <h1>BUKE Slogan</h1>
+                <img src={BUKETianZuoLogo} alt="BUKE Tian Zuo Logo" className = "sloganImage"/>
+                <h1>布渴甜作 不止今甜</h1>
                 <Link to="/menu" className="menuLink">
                     View Our Menu
                 </Link>
