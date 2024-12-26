@@ -1,7 +1,10 @@
+import React from "react";
+import HomePageVideo from "../Components/HomePageVideo"; // Match the exact casing
+
 function Home() {
     return (
         <div>
-            <h1>Home Page</h1>
+            <HomePageVideo />
         </div>
     );
 }
