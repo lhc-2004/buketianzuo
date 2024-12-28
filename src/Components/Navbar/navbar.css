@@ -21,6 +21,7 @@ header nav {
     display: flex;
     align-items: center;
     margin-left: auto;
+    transition: transform 0.35s ease-in-out; /* Smooth transition for responsive behavior */
 }
 
 nav a {
@@ -38,7 +39,7 @@ nav a:after {
     height: 3px;
     width: 0;
     background-color: var(--textColor);
-    transition: 0.1s;
+    transition: 0.1s ease-in-out; /* Smooth animation for hover effects */
 }
 
 nav a:after {
@@ -65,6 +66,7 @@ header .nav-btn {
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
+    transition: visibility 0s ease-in-out 0.35s, opacity 0.35s ease-in-out;
 }
 
 /* Responsive Styles */
@@ -72,11 +74,12 @@ header .nav-btn {
     header .nav-btn {
         visibility: visible;
         opacity: 1;
+        transition: visibility 0s ease-in-out 0s, opacity 0.35s ease-in-out;
     }
 
     header nav {
         position: fixed;
-        top: -100vh;
+        top: 0; /* Ensure it starts at the top */
         left: 0;
         height: 100%;
         width: 100%;
@@ -84,13 +87,13 @@ header .nav-btn {
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        background-color: var(--mainColor);
-        z-index: 15; 
-        transition: transform 0.35s ease-in-out;
+        background-color: var(--mainColor); /* Ensure solid background */
+        z-index: 2000; /* Set higher z-index for the navbar */
+        transform: translateY(-100vh); /* Start hidden at the top */
     }
 
     header .responsive_nav {
-        transform: translateY(100vh);
+        transform: translateY(0); /* Slide down into view */
     }
 
     nav .nav-close-btn {

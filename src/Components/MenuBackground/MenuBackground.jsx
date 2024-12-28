@@ -19,7 +19,7 @@ function MenuBackground() {
             <img src={menuBackground} alt="Menu Background" />
             <div className="text-container">
                 <div className="centered-text">MENU</div>
-                <div className="subtext hidden">「甜品不止是一种食物 , 也算是一种生活方式」</div>
+                <div className="subtext hidden">「甜品不止是一种食物 , 它也是一种生活方式」</div>
             </div>
         </div>
     );

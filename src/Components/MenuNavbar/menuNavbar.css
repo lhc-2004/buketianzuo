@@ -1,0 +1,55 @@
+.sticky-navbar {
+    margin-bottom: 5rem;
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Lower z-index than responsive navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #e4cccc;
+}
+
+
+.sticky-navbar:before,
+.sticky-navbar:after {
+    content: ""; /* Add content to pseudo-elements */
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.sticky-navbar:before {
+    top: 0; /* Position line at the top of the navbar */
+}
+
+.sticky-navbar:after {
+    bottom: 0; /* Position line at the bottom of the navbar */
+}
+
+.sticky-navbar-content {
+    display: flex;
+    justify-content: space-around;
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px; /* For consistent layout on larger screens */
+}
+
+.nav-item {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove the border */
+    color: #333; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Padding for spacing */
+    cursor: pointer;
+    border-radius: 20px; /* Creates the capsule shape */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+.nav-item:hover {
+    background-color: #f4f4f4; /* Light background on hover */
+
+}
+
