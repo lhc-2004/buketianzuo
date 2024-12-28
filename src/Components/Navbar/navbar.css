@@ -86,7 +86,7 @@ header .nav-btn {
         gap: 2.5rem;
         background-color: var(--mainColor);
         z-index: 15; 
-        transition: transform 0.75s ease-in-out;
+        transition: transform 0.35s ease-in-out;
     }
 
     header .responsive_nav {

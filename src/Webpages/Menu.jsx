@@ -1,8 +1,8 @@
+import MenuBackground from "../Components/MenuBackground/MenuBackground.jsx";
+
 function Menu() {
     return (
-        <div>
-            <h1>Menu Page</h1>
-        </div>
+        <MenuBackground />
     );
 }
 
