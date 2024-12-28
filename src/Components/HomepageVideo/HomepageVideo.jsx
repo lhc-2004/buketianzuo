@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import BakeryVideo from "../assets/BakeryVideoToBeReplace.mp4";
-import BUKETianZuoLogo from "../assets/BUKETianZuoLogo.png"
+import BakeryVideo from "../../assets/BakeryVideoToBeReplace.mp4";
+import BUKETianZuoLogo from "../../assets/BUKETianZuoLogo.png"
+
+import "./homepageVideo.css"
 
 function HomepageVideo() {
     const videoRef = useRef(null);

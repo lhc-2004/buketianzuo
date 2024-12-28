@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', serif;
+}
+
+/* Root Variables */
+:root {
+    --mainColor: rgb(26, 24, 24);
+    --textColor: white;
+}
