@@ -1,3 +1,5 @@
+import "./MenuNavbar.css"
+
 function MenuNavbar() {
     return (
         <div className="sticky-navbar">
