@@ -1,0 +1,79 @@
+[
+    {
+      "id": "cake-section",
+      "title": "CAKE",
+      "description": "Very Good Cake.",
+      "products": [
+      
+      ]
+    },
+    {
+      "id": "bread-section",
+      "title": "BREAD",
+      "description": "Very Good Bread.",
+      "products": [
+        {
+          "image": "../../menuDataPic/BakeToBeReplace.jpg",
+          "name": "Good Bread 1",
+          "description": "very good"
+        },
+        {
+          "image": "../../menuDataPic/BakeToBeReplace.jpg",
+          "name": "Good Bread 2",
+          "description": "very good"
+        }
+      ]
+    },
+    {
+        "id": "tea-section",
+        "title": "TEA",
+        "description": "Very Good Tea",
+        "products": [
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Tea 1",
+            "description": "very good"
+          },
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Tea 2",
+            "description": "very good"
+          }
+        ]
+      },
+      {
+        "id": "coffee-section",
+        "title": "COFFEE",
+        "description": "Very good Coffee",
+        "products": [
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Coffee 1",
+            "description": "very good"
+          },
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Coffee 2",
+            "description": "very good"
+          }
+        ]
+      },
+      {
+        "id": "rice-roll-section",
+        "title": "RICE ROLL",
+        "description": "Very good Rice Roll",
+        "products": [
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Rice Roll 1",
+            "description": "very good"
+          },
+          {
+            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "name": "Rice Roll 2",
+            "description": "very good"
+          }
+        ]
+      }
+]
+  

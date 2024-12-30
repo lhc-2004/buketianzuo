@@ -1,21 +1,24 @@
+/* Sticky Navbar Container */
 .sticky-navbar {
     margin-bottom: 5rem;
     padding: 25px 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the start for scrolling */
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 100; /* Lower z-index than responsive navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #e4cccc;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of child elements */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
 
-
+/* Pseudo-elements for styling lines at the top and bottom of the navbar */
 .sticky-navbar:before,
 .sticky-navbar:after {
-    content: ""; /* Add content to pseudo-elements */
     position: absolute;
     left: 0;
     right: 0;
@@ -29,13 +32,18 @@
     bottom: 0; /* Position line at the bottom of the navbar */
 }
 
+/* Navbar Content Container */
 .sticky-navbar-content {
-    display: flex;
-    justify-content: space-around;
-    width: 90%; /* Adjust width as needed */
-    max-width: 1200px; /* For consistent layout on larger screens */
+    display: flex; /* Use flex layout */
+    justify-content: space-around; /* Center navigation items horizontally */
+    width: 90%; /* Allow content to determine width */
+    max-width: 1200px; /* Limit max width for large screens */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
+/* Individual Navigation Items */
 .nav-item {
     background-color: transparent; /* Transparent background */
     border: none; /* Remove the border */
@@ -44,12 +52,47 @@
     font-weight: bold;
     padding: 10px 20px; /* Padding for spacing */
     cursor: pointer;
-    border-radius: 20px; /* Creates the capsule shape */
+    border-radius: 20px; /* Capsule shape */
     transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+    text-decoration: none;
 }
 
+/* Hover Effect for Navigation Items */
 .nav-item:hover {
     background-color: #f4f4f4; /* Light background on hover */
-
+    text-decoration: none;
 }
 
+/* Optional: Scrollbar Styling */
+.sticky-navbar::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar height */
+}
+
+.sticky-navbar::-webkit-scrollbar-thumb {
+    background: #ccc; /* Scrollbar thumb color */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.sticky-navbar::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Darker thumb color on hover */
+}
+
+.sticky-navbar::-webkit-scrollbar-track {
+    background: transparent; /* Transparent scrollbar track */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .sticky-navbar {
+        padding: 15px 0; /* Reduce padding for smaller screens */
+    }
+
+    .nav-item {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .sticky-navbar-content {
+        gap: 10px; /* Reduce spacing between items */
+    }
+}

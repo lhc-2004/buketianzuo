@@ -1,0 +1,42 @@
+.product {
+  padding: 20px;
+  text-align: left; /* Align content to the left */
+  background-color: #ffffff;
+  border-radius: 10px; /* Soft rounded corners for the card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.product:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product:hover .product-image {
+  box-shadow: 0 0 0 10px #e4cccc; /* Apply hover effect to the product image */
+  transition: 0.5s ease; /* Smooth transition for the hover effect */
+}
+
+.product-image {
+  width: 100%; /* Responsive width relative to the product card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Soft corners for the image */
+  object-fit: cover; /* Prevent distortion of the image */
+  margin-bottom: 15px; /* Space between the image and text */
+  transition: 0.5s ease; /* Add smooth transition */
+}
+
+.product-name {
+  font-size: 20px; /* Slightly larger font for emphasis */
+  font-weight: bold;
+  color: #333; /* Darker text for readability */
+  margin: 10px 0; /* Spacing above and below the name */
+  text-align: left; /* Align the title to the left */
+}
+
+.product-description {
+  font-size: 16px; /* Slightly larger font for description */
+  color: #888; /* Soft gray color for secondary text */
+  line-height: 1.5; /* Improve readability */
+  margin: 0;
+  text-align: left; /* Align the text to the left */
+}

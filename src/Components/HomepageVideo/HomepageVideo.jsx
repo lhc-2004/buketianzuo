@@ -45,10 +45,18 @@ function HomepageVideo() {
 
     return (
         <div className="homepageVideo">
-            <video ref={videoRef} src={BakeryVideo} autoPlay loop muted />
+            <video
+                ref={videoRef}
+                src={BakeryVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                disablePictureInPicture
+            />
             <div ref={overlayRef} className="blackOverlay"></div>
             <div ref={sloganRef} className="slogan">
-                <img src={BUKETianZuoLogo} alt="BUKE Tian Zuo Logo" className = "sloganImage"/>
+                <img src={BUKETianZuoLogo} alt="BUKE Tian Zuo Logo" className="sloganImage" />
                 <h1>布渴甜作 不止今甜</h1>
                 <Link to="/menu" className="menuLink">
                     View Our Menu

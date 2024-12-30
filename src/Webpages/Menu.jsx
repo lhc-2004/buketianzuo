@@ -1,34 +1,26 @@
 import MenuBackground from "../Components/MenuBackground/MenuBackground.jsx";
 import MenuNavbar from "../Components/MenuNavbar/MenuNavbar.jsx";
+import Section from "../Components/Section/Section.jsx"
+import menuData from "../menuData.json"
 
 function Menu() {
-    return (
-        <>
-            <MenuBackground />
-            <MenuNavbar />
-            <div id="cake-section">
-                <h1>CAKE</h1>
-                <p>Details about cakes...</p>
-            </div>
-            <div id="bread-section">
-                <h1>BREAD</h1>
-                <p>Details about bread...</p>
-            </div>
-            <div id="tea-section">
-                <h1>TEA</h1>
-                <p>Details about tea...</p>
-            </div>
-            <div id="coffee-section">
-                <h1>COFFEE</h1>
-                <p>Details about coffee...</p>
-            </div>
-            <div id="rice-roll-section">
-                <h1>RICE ROLL</h1>
-                <p>Details about rice rolls...</p>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <MenuBackground />
+      <MenuNavbar />
+      <div className="menu">
+        {menuData.map((section) => (
+          <Section
+            key={section.id}
+            id={section.id}
+            title={section.title}
+            description={section.description} 
+            products={section.products}
+          />
+        ))}
+      </div>
+    </>
+  );
 }
-
 
 export default Menu;
