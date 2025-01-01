@@ -23,7 +23,6 @@ function Navbar () {
                 <Link to="/" onClick={showNavbar}>Home</Link>
                 <Link to="/menu" onClick={showNavbar}>Menu</Link>
                 <Link to="/about-us" onClick={showNavbar}>About Us</Link>
-                <Link to="/location" onClick={showNavbar}>Location</Link>
                 <Link to="/contact" onClick={showNavbar}>Contact</Link>
                 <button className="nav-btn nav-close-btn" onClick = {showNavbar}>
                     <FaTimes/> 
