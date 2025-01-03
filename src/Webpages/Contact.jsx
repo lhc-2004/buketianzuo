@@ -1,7 +1,9 @@
+import ContactPage from "../Components/ContactPage/ContactPage.jsx"
+
 function Contact() {
     return (
         <div>
-            <h1>Contact Page</h1>
+            <ContactPage />
         </div>
     );
 }
