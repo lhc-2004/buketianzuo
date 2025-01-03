@@ -28,11 +28,13 @@
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     bottom: -10px;
-    width: 130%;
+    width: 100%; /* Make the width relative to the container */
+    max-width: 130%; /* Prevent the bar from exceeding a maximum width */
     height: 15px;
     background-color: #e4cccc;
     animation: growBar 1s ease-out forwards;
     transform-origin: center;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width calculation */
 }
 
 @keyframes growBar {

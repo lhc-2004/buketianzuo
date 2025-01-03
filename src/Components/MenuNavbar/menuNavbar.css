@@ -4,47 +4,31 @@
     padding: 25px 0;
     width: 100%;
     display: flex;
-    justify-content: flex-start; /* Align items to the start for scrolling */
+    justify-content: center; /* Center-align on larger screens */
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100; /* Lower z-index than responsive navbar */
+    z-index: 100; /* Keep navbar above content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #e4cccc;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping of child elements */
     scroll-behavior: smooth; /* Smooth scrolling behavior */
-}
-
-/* Pseudo-elements for styling lines at the top and bottom of the navbar */
-.sticky-navbar:before,
-.sticky-navbar:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.sticky-navbar:before {
-    top: 0; /* Position line at the top of the navbar */
-}
-
-.sticky-navbar:after {
-    bottom: 0; /* Position line at the bottom of the navbar */
+    -webkit-overflow-scrolling: touch; /* Improve scrolling on mobile */
 }
 
 /* Navbar Content Container */
 .sticky-navbar-content {
     display: flex; /* Use flex layout */
-    justify-content: space-around; /* Center navigation items horizontally */
-    width: 90%; /* Allow content to determine width */
-    max-width: 1200px; /* Limit max width for large screens */
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center; /* Center-align on larger screens */
+    gap: 88px; /* Spacing between nav items */
+    padding: 0 15px; /* Add padding for better spacing */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
 }
-
 
 /* Individual Navigation Items */
 .nav-item {
+    flex: 0 0 auto; /* Prevent nav items from shrinking */
     background-color: transparent; /* Transparent background */
     border: none; /* Remove the border */
     color: #333; /* Text color */
@@ -55,6 +39,7 @@
     border-radius: 20px; /* Capsule shape */
     transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
     text-decoration: none;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 /* Hover Effect for Navigation Items */
@@ -84,15 +69,15 @@
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .sticky-navbar {
-        padding: 15px 0; /* Reduce padding for smaller screens */
+        justify-content: flex-start; /* Align items to the start for scrolling */
+    }
+
+    .sticky-navbar-content {
+        gap: 10px; /* Reduce spacing between items */
     }
 
     .nav-item {
         font-size: 14px; /* Smaller font size */
         padding: 8px 16px; /* Adjust padding */
-    }
-
-    .sticky-navbar-content {
-        gap: 10px; /* Reduce spacing between items */
     }
 }

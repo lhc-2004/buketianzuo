@@ -98,11 +98,15 @@
     }
 
     .sloganImage {
-        width: 250px; /* Scale down logo size */
+        width: 240px; /* Scale down logo size */
     }
 
     .menuLink {
         font-size: 0.9rem; /* Slightly smaller text */
         padding: 0.5rem 1rem; /* Adjust padding */
+    }
+
+    .slogan{
+        font-size: 12px;
     }
 }
