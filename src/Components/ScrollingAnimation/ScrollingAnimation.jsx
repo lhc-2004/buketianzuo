@@ -1,5 +1,9 @@
+// ScrollingAnimation Component
+// This component creates a horizontally scrolling animation of repeating text elements.
+// CSS is used to achieve the infinite scrolling effect.
+
 import React from "react";
-import "./scrollingAnimation.css"
+import "./scrollingAnimation.css";
 
 const ScrollingAnimation = () => {
     return (

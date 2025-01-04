@@ -1,14 +1,20 @@
-import { useRef } from "react"
-import { Link } from "react-router-dom";
-import {FaBars, FaTimes} from "react-icons/fa"; 
-import "./navbar.css"
+// Navbar Component
+// The Navbar component includes a responsive navigation bar with links and a toggle functionality.
+// It uses React's useRef for DOM manipulation and the react-icons library for toggle buttons.
+// CSS handles both regular and responsive designs.
 
-function Navbar () {
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa"; 
+import "./navbar.css";
+
+function Navbar() {
     const navRef = useRef();
 
+    // Toggles the visibility of the navigation menu
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
-    }
+    };
 
     return (
         <header>
@@ -24,15 +30,15 @@ function Navbar () {
                 <Link to="/menu" onClick={showNavbar}>Menu</Link>
                 <Link to="/about-us" onClick={showNavbar}>About Us</Link>
                 <Link to="/contact" onClick={showNavbar}>Contact</Link>
-                <button className="nav-btn nav-close-btn" onClick = {showNavbar}>
-                    <FaTimes/> 
+                <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+                    <FaTimes />
                 </button>
             </nav>
-            <button className="nav-btn" onClick = {showNavbar}>
+            <button className="nav-btn" onClick={showNavbar}>
                 <FaBars />
             </button>
         </header>
     );
 }
 
-export default Navbar 
+export default Navbar;

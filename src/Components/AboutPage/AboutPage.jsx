@@ -1,3 +1,6 @@
+// AboutPage Component
+// This component displays information about BUKE, including its story and promises section.
+
 import './aboutPage.css';
 import BUKElogo from "../../assets/BUKETianZuoLogoBlack.png";
 

@@ -1,3 +1,5 @@
+/* aboutPage.css */
+
 .aboutUsContainer {
     text-align: center;
     margin-top: 1rem;
@@ -28,13 +30,13 @@
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     bottom: -10px;
-    width: 100%; /* Make the width relative to the container */
-    max-width: 130%; /* Prevent the bar from exceeding a maximum width */
+    width: 100%;
+    max-width: 130%;
     height: 15px;
-    background-color: #e4cccc;
+    background-color: var(--secondaryColor);
     animation: growBar 1s ease-out forwards;
     transform-origin: center;
-    box-sizing: border-box; /* Ensure padding and borders are included in the width calculation */
+    box-sizing: border-box;
 }
 
 @keyframes growBar {
@@ -51,7 +53,7 @@
     max-width: 800px;
     color: #333;
     text-align: center;
-    padding: 0 2rem; /* Adds default side padding */
+    padding: 0 2rem;
 }
 
 .storyContent p {
@@ -59,7 +61,6 @@
     line-height: 1.8rem;
     color: #333;
     margin-bottom: 1.5rem;
-    text-align: center; /* Centers the text */
 }
 
 .storyContent .storyIcon {
@@ -75,7 +76,7 @@
     justify-content: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    gap: 1rem; /* Spacing between the text and the lines */
+    gap: 1rem;
 }
 
 .promisesTitle .line {
@@ -87,21 +88,20 @@
 .promisesContainer {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* Default gap between promises */
-    flex-wrap: wrap; /* Allows promises to wrap on smaller screens */
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .promise {
     text-align: center;
-    margin: 0; /* Default margin */
-    max-width: 300px; /* Optional: constrain the width of each promise */
+    max-width: 300px;
 }
 
 .promise .circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #e4cccc;
+    background-color: var(--secondaryColor);
     margin: 0 auto 1rem auto;
 }
 
@@ -120,34 +120,34 @@
 /* Media query for small screens */
 @media (max-width: 768px) {
     .storyContent {
-        padding: 0 3rem; /* Adds more side padding for smaller screens */
+        padding: 0 3rem;
     }
 
     .storyContent p {
-        margin: 1rem 0; /* Adds vertical margin for better spacing */
+        margin: 1rem 0;
     }
 
     .promise {
-        margin: 1rem; /* Adds margin to promises on smaller screens */
+        margin: 1rem;
     }
 }
 
 /* Media query for very small screens */
 @media (max-width: 480px) {
     .storyContent {
-        padding: 0 1.5rem; /* Further increases side padding for very small screens */
+        padding: 0 1.5rem;
     }
 
     .storyContent p {
-        margin: 1.5rem 0; /* Increases margin for better readability */
+        margin: 1.5rem 0;
     }
 
     .promisesContainer {
-        flex-direction: column; /* Stacks promises vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .promise {
-        margin: 1.5rem 0; /* Adds vertical margin between stacked promises */
+        margin: 1.5rem 0;
     }
 }

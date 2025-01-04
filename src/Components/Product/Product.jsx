@@ -1,4 +1,7 @@
-import "./product.css"
+// Product Component
+// This component renders a single product card with an image, name, and description.
+
+import "./product.css";
 
 const Product = ({ image, name, description }) => (
   <div className="product">
@@ -11,5 +14,3 @@ const Product = ({ image, name, description }) => (
 );
 
 export default Product;
-
-  

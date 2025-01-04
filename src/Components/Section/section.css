@@ -1,3 +1,5 @@
+/* section.css */
+
 .section {
   margin-bottom: 40px;
   scroll-margin-top: 100px; /* Adjust this value to match the height of your navbar */
@@ -14,7 +16,7 @@
 @media (max-width: 768px) {
   .section {
     padding: 0 5%; /* Even smaller padding for smaller window sizes */
-  }
+  } 
 }
 
 @media (min-width: 1600px) {
@@ -22,7 +24,6 @@
     padding: 0 20%; /* Increase padding for larger screens */
   }
 }
-
 
 .section-header {
   border-bottom: 1px solid #e0e0e0; /* Add border to the header wrapper */
@@ -45,10 +46,9 @@
   display: block;
   width: 100%; /* Match the width of the title text */
   height: 8px; /* Adjust the height of the bar */
-  background-color: #e4cccc; /* Set the bar's color */
+  background-color: var(--secondaryColor); /* Set the bar's color */
   margin-top: 10px; /* Space between title and bar */
 }
-
 
 .section-description {
   font-size: 24px;

@@ -1,9 +1,12 @@
+// HomepageVideo Component
+// This component displays a fullscreen background video with an overlay and slogan that appears near the end of the video.
+// It uses React's useRef and useEffect for video and DOM element manipulation, and includes responsive styles for smaller screens.
+
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import BakeryVideo from "../../assets/BakeryVideoToBeReplace.mp4";
-import BUKETianZuoLogo from "../../assets/BUKETianZuoLogo.png"
-
-import "./homepageVideo.css"
+import BUKETianZuoLogo from "../../assets/BUKETianZuoLogo.png";
+import "./homepageVideo.css";
 
 function HomepageVideo() {
     const videoRef = useRef(null);
@@ -12,34 +15,24 @@ function HomepageVideo() {
 
     useEffect(() => {
         const video = videoRef.current;
-        const showSloganBeforeEnd = 5; // Number of seconds before the video ends
+        const showSloganBeforeEnd = 5; // Seconds before the video ends
 
         const handleTimeUpdate = () => {
             if (video.currentTime >= video.duration - showSloganBeforeEnd) {
-                if (overlayRef.current) {
-                    overlayRef.current.classList.add("visible");
-                }
+                overlayRef.current?.classList.add("visible");
             }
         };
 
         const handleOverlayTransitionEnd = () => {
-            if (sloganRef.current) {
-                sloganRef.current.classList.add("visible");
-            }
+            sloganRef.current?.classList.add("visible");
         };
 
         video.addEventListener("timeupdate", handleTimeUpdate);
-
-        if (overlayRef.current) {
-            overlayRef.current.addEventListener("transitionend", handleOverlayTransitionEnd);
-        }
+        overlayRef.current?.addEventListener("transitionend", handleOverlayTransitionEnd);
 
         return () => {
             video.removeEventListener("timeupdate", handleTimeUpdate);
-
-            if (overlayRef.current) {
-                overlayRef.current.removeEventListener("transitionend", handleOverlayTransitionEnd);
-            }
+            overlayRef.current?.removeEventListener("transitionend", handleOverlayTransitionEnd);
         };
     }, []);
 
@@ -58,7 +51,11 @@ function HomepageVideo() {
             <div ref={sloganRef} className="slogan">
                 <img src={BUKETianZuoLogo} alt="BUKE Tian Zuo Logo" className="sloganImage" />
                 <h1>布渴甜作 不止今甜</h1>
-                <Link to="/menu" className="menuLink">
+                <Link
+                    to="/menu"
+                    className="menuLink"
+                    onClick={() => window.scrollTo(0, 0)}
+                >
                     View Our Menu
                 </Link>
             </div>

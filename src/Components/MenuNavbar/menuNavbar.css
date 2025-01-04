@@ -1,83 +1,85 @@
+/* MenuNavbar.css */
+
 /* Sticky Navbar Container */
 .sticky-navbar {
     margin-bottom: 5rem;
     padding: 25px 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* Center-align on larger screens */
+    justify-content: center;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100; /* Keep navbar above content */
+    z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #e4cccc;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping of child elements */
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-    -webkit-overflow-scrolling: touch; /* Improve scrolling on mobile */
+    background-color: var(--secondaryColor);
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Navbar Content Container */
 .sticky-navbar-content {
-    display: flex; /* Use flex layout */
-    justify-content: center; /* Center-align on larger screens */
-    gap: 88px; /* Spacing between nav items */
-    padding: 0 15px; /* Add padding for better spacing */
-    flex-wrap: nowrap; /* Prevent wrapping of items */
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    padding: 0 15px;
+    flex-wrap: nowrap;
 }
 
 /* Individual Navigation Items */
 .nav-item {
-    flex: 0 0 auto; /* Prevent nav items from shrinking */
-    background-color: transparent; /* Transparent background */
-    border: none; /* Remove the border */
-    color: #333; /* Text color */
+    flex: 0 0 auto;
+    background-color: transparent;
+    border: none;
+    color: #333;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px; /* Padding for spacing */
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 20px; /* Capsule shape */
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 /* Hover Effect for Navigation Items */
 .nav-item:hover {
-    background-color: #f4f4f4; /* Light background on hover */
+    background-color: #f4f4f4;
     text-decoration: none;
 }
 
 /* Optional: Scrollbar Styling */
 .sticky-navbar::-webkit-scrollbar {
-    height: 8px; /* Horizontal scrollbar height */
+    height: 8px;
 }
 
 .sticky-navbar::-webkit-scrollbar-thumb {
-    background: #ccc; /* Scrollbar thumb color */
-    border-radius: 4px; /* Rounded corners for the thumb */
+    background: #ccc;
+    border-radius: 4px;
 }
 
 .sticky-navbar::-webkit-scrollbar-thumb:hover {
-    background: #999; /* Darker thumb color on hover */
+    background: #999;
 }
 
 .sticky-navbar::-webkit-scrollbar-track {
-    background: transparent; /* Transparent scrollbar track */
+    background: transparent;
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .sticky-navbar {
-        justify-content: flex-start; /* Align items to the start for scrolling */
+        justify-content: center;
     }
 
     .sticky-navbar-content {
-        gap: 10px; /* Reduce spacing between items */
+        gap: 18px;
     }
 
     .nav-item {
-        font-size: 14px; /* Smaller font size */
-        padding: 8px 16px; /* Adjust padding */
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }

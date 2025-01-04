@@ -1,7 +1,9 @@
+// MenuBackground Component
+// This component displays a background image with an overlay and centered text elements.
+// It features a delayed reveal animation for the subtext using CSS animations.
+
 import menuBackground from "../../assets/menuBackground.png";
-
-import './MenuBackground.css'; /*背景应与产品背景做呼应 */
-
+import './MenuBackground.css';
 import { useEffect } from "react";
 
 function MenuBackground() {

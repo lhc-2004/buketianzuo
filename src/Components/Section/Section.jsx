@@ -1,3 +1,7 @@
+// Section Component
+// This component renders a titled section with an optional description and a list of products.
+// It includes responsive CSS to adjust layout based on screen size.
+
 import Product from "../Product/Product.jsx";
 import "./section.css";
 

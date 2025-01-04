@@ -1,28 +1,30 @@
-/* Header Section */
+/* Styles for the main container of the contact page */
 .contact-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #e4cccc;
+    background-color: var(--secondaryColor);
     color: black;
     height: 20vh;
     padding: 20px;
 }
 
+/* Styling for the title section of the contact page */
 .contact-title {
     font-size: 3rem;
     font-weight: bold;
     margin: 10px 0;
 }
 
+/* Styling for the subtitle of the contact page */
 .contact-subtitle {
     font-size: 1.25rem;
     margin-top: 10px;
 }
 
-/* Contact Details and Form Section */
+/* Container for contact details, ensuring flexibility and responsiveness */
 .contact-details {
     display: flex;
     flex-wrap: wrap;
@@ -33,18 +35,18 @@
     color: #333;
 }
 
-/* Map Section */
+/* Styling for the map section with embedded iframe */
 .map-section {
     flex: 1;
     width: 100%;
-    min-width: 200px; /* Reduced minimum width for smaller screens */
-    height: auto; /* Adjust height dynamically */
+    min-width: 200px;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    aspect-ratio: 16 / 9; /* Maintain responsive aspect ratio */
 }
 
+/* Ensuring the iframe fits perfectly inside the map section */
 .map-section iframe {
     position: absolute;
     top: 0;
@@ -54,7 +56,7 @@
     border: 0;
 }
 
-/* Info Section */
+/* Styling for the information section of the contact page */
 .info-section {
     flex: 1;
     min-width: 300px;
@@ -66,55 +68,60 @@
     line-height: 1.6;
 }
 
+/* Styling for the headings inside the information section */
 .info-section h3 {
     margin-top: 10px;
     font-size: 1.5rem;
     color: #444;
 }
 
+/* Styling for paragraphs in the information section */
 .info-section p {
     margin: 5px 0 15px;
 }
 
-/* Form Section */
+/* Styling for the contact form section */
 .form-section {
     flex: 1;
-    min-width: 300px; /* Minimum width for smaller screens */
-    max-width: 100%; /* Maximum width for larger screens */
-    width: 100%; /* Full width within its container */
-    padding: 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Form section title styling */
 .form-section h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #444;
-    text-align: center; /* Center the title for consistency */
+    text-align: center;
 }
 
+/* Form layout with proper spacing between fields */
 .form-section form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%; /* Ensure form takes the full width of the section */
+    width: 100%;
 }
 
+/* Styling for form input fields and textarea */
 .form-section input,
 .form-section textarea {
-    width: 100%; /* Full width of the parent container */
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
 }
 
+/* Additional styling for textareas to allow resizing */
 .form-section textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 100px; /* Set a minimum height */
+    resize: vertical;
+    min-height: 100px;
 }
 
+/* Styling for the submit button in the form */
 .form-section button {
     padding: 12px 20px;
     background-color: black;
@@ -124,50 +131,42 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Make button take full width */
+    width: 100%;
 }
 
+/* Hover effect for the submit button */
 .form-section button:hover {
     background-color: #444;
 }
 
-/* Responsive Design */
+/* Responsive design for smaller screens */
 @media (max-width: 938px) {
+    /* Adjust layout for smaller devices */
     .contact-details {
         flex-wrap: wrap;
         flex-direction: column;
         gap: 20px;
     }
 
+    /* Ensure individual sections take up full width on small screens */
     .map-section,
     .info-section,
     .form-section {
-        flex: 1 1 100%; /* One item per row */
+        flex: 1 1 100%;
         max-width: 100%;
         margin: 0 auto;
     }
 
+    /* Set a fixed height for the map section on smaller screens */
     .map-section {
-        height: 250px; /* Set fallback height for smaller screens */
+        height: 250px;
     }
-}
 
-@media (max-width: 768px) {
+    /* Adjust form width for better display on small screens */
     .form-section {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .form-section h3 {
-        font-size: 1.2rem; /* Reduce title size */
-    }
-
-    .form-section input,
-    .form-section textarea {
-        font-size: 0.9rem; /* Adjust input font size for smaller screens */
-    }
-
-    .form-section button {
-        padding: 10px; /* Adjust button padding */
-        font-size: 0.9rem; /* Adjust button font size */
+        width: 80%; 
+        max-width: 500px; 
+        padding: 0; 
+        margin: 0 auto; 
     }
 }

@@ -1,3 +1,6 @@
+/* scrollingAnimation.css */
+
+/* Container for the infinite scroll effect */
 .infiniteScroll {
     font-size: 88px;
     padding-block: 8px;
@@ -10,6 +13,7 @@
     gap: var(--gap);
 }
 
+/* Style for each scrolling list */
 .infiniteScroll ul {
     list-style: none;
     flex-shrink: 0;
@@ -18,10 +22,11 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--gap);
-    
+
     animation: scroll 120s linear infinite;
 }
 
+/* Keyframes for the scrolling effect */
 @keyframes scroll {
     to {
         transform: translateX(calc(-100% - var(--gap)));

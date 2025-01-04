@@ -1,3 +1,5 @@
+/* navbar.css */
+
 /* Header Styles */
 header {
     display: flex;
@@ -11,7 +13,6 @@ header {
 
 .navbar-logo {
     margin-left: 2rem;
-    margin-top: 1rem;
     width: 188px;
     height: auto;
     cursor: pointer;
@@ -21,7 +22,7 @@ header nav {
     display: flex;
     align-items: center;
     margin-left: auto;
-    transition: transform 0.35s ease-in-out; /* Smooth transition for responsive behavior */
+    transition: transform 0.35s ease-in-out;
 }
 
 nav a {
@@ -32,28 +33,21 @@ nav a {
     position: relative;
 }
 
-nav a:before,
 nav a:after {
     content: "";
     position: absolute;
     height: 3px;
     width: 0;
-    background-color: var(--textColor);
-    transition: 0.1s ease-in-out; /* Smooth animation for hover effects */
+    background-color: var(--secondaryColor);
+    transition: 0.1s ease-in-out;
 }
 
 nav a:after {
     left: 0;
-    bottom: -10px;
+    bottom: -8px;
 }
 
-nav a:before {
-    right: 0;
-    top: -10px;
-}
-
-nav a:hover:after,
-nav a:hover:before {
+nav a:hover:after {
     width: 100%;
 }
 
@@ -79,7 +73,7 @@ header .nav-btn {
 
     header nav {
         position: fixed;
-        top: 0; /* Ensure it starts at the top */
+        top: 0;
         left: 0;
         height: 100%;
         width: 100%;
@@ -87,13 +81,13 @@ header .nav-btn {
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        background-color: var(--mainColor); /* Ensure solid background */
-        z-index: 2000; /* Set higher z-index for the navbar */
-        transform: translateY(-100vh); /* Start hidden at the top */
+        background-color: var(--mainColor);
+        z-index: 2000;
+        transform: translateY(-100vh);
     }
 
     header .responsive_nav {
-        transform: translateY(0); /* Slide down into view */
+        transform: translateY(0);
     }
 
     nav .nav-close-btn {

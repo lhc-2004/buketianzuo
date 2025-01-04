@@ -57,23 +57,6 @@
             "description": "very good"
           }
         ]
-      },
-      {
-        "id": "rice-roll-section",
-        "title": "RICE ROLL",
-        "description": "Very good Rice Roll",
-        "products": [
-          {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
-            "name": "Rice Roll 1",
-            "description": "very good"
-          },
-          {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
-            "name": "Rice Roll 2",
-            "description": "very good"
-          }
-        ]
       }
 ]
   

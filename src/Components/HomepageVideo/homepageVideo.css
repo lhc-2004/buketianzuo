@@ -1,3 +1,5 @@
+/* homepageVideo.css */
+
 /* Container for the homepage video */
 .homepageVideo {
     position: relative;
@@ -13,7 +15,7 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none; /* Disable all interactions */
-    z-index: 0; /* Ensure it stays in the background */
+    z-index: 0;
 }
 
 /* Black overlay styling */
@@ -25,7 +27,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     opacity: 0; /* Initially invisible */
-    visibility: hidden; /* Initially hidden */
+    visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
     z-index: 5;
 }
@@ -39,14 +41,14 @@
 /* Slogan container */
 .slogan {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for center alignment */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
     color: white;
-    z-index: 10; /* Above overlay */
+    z-index: 10;
 }
 
 /* Slogan image styling */
@@ -58,16 +60,16 @@
 /* Slogan text when visible */
 .slogan.visible {
     opacity: 1; /* Fully visible */
-    animation: slideDownToCenter 1s ease-in-out forwards; /* Slide-in effect */
+    animation: slideDownToCenter 1s ease-in-out forwards;
 }
 
 /* Slogan text animation */
 @keyframes slideDownToCenter {
     from {
-        transform: translate(-50%, -100%); /* Start from above */
+        transform: translate(-50%, -100%);
     }
     to {
-        transform: translate(-50%, -50%); /* End at center */
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -79,34 +81,34 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease; /* Smooth hover transition */
+    transition: background-color 0.3s ease;
 }
 
 /* Menu link hover effect */
 .menuLink:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background */
-    color: black; /* Dark text */
+    background-color: var(--secondaryColor);
+    color: black;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .homepageVideo {
-        height: 50vh; /* Adjust height for smaller screens */
+        height: 50vh;
     }
 
     .sloganImage {
-        width: 240px; /* Scale down logo size */
+        width: 240px;
     }
 
     .menuLink {
-        font-size: 0.9rem; /* Slightly smaller text */
-        padding: 0.5rem 1rem; /* Adjust padding */
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
     }
 
-    .slogan{
-        font-size: 12px;
+    .slogan {
+        font-size: 0.9rem;
     }
 }

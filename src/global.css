@@ -11,5 +11,6 @@
 /* Root Variables */
 :root {
     --mainColor: rgb(26, 24, 24);
+    --secondaryColor: #e4cccc;
     --textColor: white;
 }
