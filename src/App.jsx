@@ -7,6 +7,7 @@ import Home from "./Webpages/Home.jsx";
 import Menu from "./Webpages/Menu.jsx";
 import About from "./Webpages/About.jsx";
 import Contact from "./Webpages/Contact.jsx";
+import CustomeCake from "./Webpages/CustomeCake.jsx";
 
 import "./global.css";
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/custome-cake" element={<CustomeCake />} />
         </Routes>
         <Footer/>
     </Router>
