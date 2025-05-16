@@ -1,77 +1,97 @@
 /* section.css */
 
+/* Container for each section */
 .section {
   margin-bottom: 40px;
-  scroll-margin-top: 100px; /* Adjust this value to match the height of your navbar */
-  padding: 0 15%; /* Default padding */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  scroll-margin-top: 100px; /* Offset height for sticky navbar */
+  padding: 0 15%; /* Default horizontal padding */
+  box-sizing: border-box;
 }
 
+/* Reduce padding on medium screens */
 @media (max-width: 1200px) {
   .section {
-    padding: 0 10%; /* Reduce padding for smaller screens */
+    padding: 0 10%;
   }
 }
 
+/* Reduce padding on small screens */
 @media (max-width: 768px) {
   .section {
-    padding: 0 5%; /* Even smaller padding for smaller window sizes */
-  } 
-}
-
-@media (min-width: 1600px) {
-  .section {
-    padding: 0 20%; /* Increase padding for larger screens */
+    padding: 0 5%;
   }
 }
 
-.section-header {
-  border-bottom: 1px solid #e0e0e0; /* Add border to the header wrapper */
-  padding-bottom: 5px; /* Space between border and content */
-  margin-bottom: 20px; /* Space below the border */
+/* Increase padding on very large screens */
+@media (min-width: 1600px) {
+  .section {
+    padding: 0 20%;
+  }
 }
 
+/* Header styling */
+.section-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Title styling with underline bar */
 .section-title {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Times New Roman', serif;
   margin: 0;
-  text-align: left;
-  position: relative; /* Necessary for positioning the pseudo-element */
-  display: inline-block; /* Ensures the title's width matches its text */
+  position: relative;
+  display: inline-block;
 }
-
 .section-title::after {
   content: '';
   display: block;
-  width: 100%; /* Match the width of the title text */
-  height: 8px; /* Adjust the height of the bar */
-  background-color: var(--secondaryColor); /* Set the bar's color */
-  margin-top: 10px; /* Space between title and bar */
+  width: 100%;
+  height: 5px;
+  background-color: var(--secondaryColor);
+  margin-top: 3px;
 }
 
+/* Optional description styling */
 .section-description {
   font-size: 24px;
   color: #6b6b6b;
-  margin: 10px 0 10px;
-  text-align: left;
+  margin: 10px 0;
   line-height: 1.5;
 }
 
+/* Layout for product grid */
 .section-products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
-  gap: 20px; /* Space between products */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
+/* Two-column layout for medium screens */
 @media (max-width: 1024px) {
   .section-products {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Single-column layout for small screens */
 @media (max-width: 600px) {
   .section-products {
-    grid-template-columns: 1fr; /* 1 column for small screens (phones) */
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Adjust typography on small screens */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 35px;
+  }
+  .section-description {
+    font-size: 15px;
+  }
+  .section {
+    padding: 0 10%;
   }
 }

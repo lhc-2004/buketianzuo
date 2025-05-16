@@ -1,89 +1,70 @@
+/* customeCakeDescription.css */
+
 .cake-description-container {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    line-height: 1.6;
-    border: 2px solid black; /* Adds a black border around the entire content */
-    border-radius: 10px; /* Adds rounded corners to the border */
-    max-width: 1000px; /* Limit the maximum width */
-    margin: 0 auto; /* Center horizontally */
-    margin-bottom: 5rem;
-    margin-top: 8rem;
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 8rem auto 5rem;
+  padding: 20px;
+  line-height: 1.6;
+  border: 2px solid #000;
+  border-radius: 10px;
 }
 
 .header-image {
-    display: block;
-    margin: 0 auto;
-    width: 50%; /* Adjust to your desired size */
-    height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 50%;
+  height: auto;
 }
 
 .content {
-    padding: 20px; /* Adds spacing within the border */
-    text-align: left; /* Ensures text alignment is unaffected */
-    font-size: 20px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 .content h2 {
-    color: #333;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  margin: 1rem 0;
+  color: #333;
 }
 
-.content ul, .content ol {
-    margin: 0 0 20px 20px;
+.content ul,
+.content ol {
+  margin: 0 0 1.5rem 1.5rem;
 }
 
-.content ul li, .content ol li {
-    margin-bottom: 10px;
+.content li {
+  margin-bottom: 0.5rem;
 }
 
 .content p {
-    padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .warning {
-    color: rgb(178, 10, 10);
+  color: #b20a0a;
 }
 
-/* Responsive styles */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
-    .cake-description-container {
-        max-width: 90%; /* Reduce the container width on smaller screens */
-        margin-top: 6rem;
-        margin-bottom: 4rem;
-    }
-
-    .header-image {
-        width: 70%; /* Make the header image take up more space on smaller screens */
-    }
+  .cake-description-container {
+    max-width: 90%;
+    margin: 6rem auto 4rem;
+  }
+  .header-image {
+    width: 70%;
+  }
 }
 
 @media (max-width: 768px) {
-    .cake-description-container {
-        margin-top: 4rem;
-        margin-bottom: 3rem;
-        padding: 15px; /* Reduce padding for smaller screens */
-    }
-
-    .header-image {
-        width: 80%; /* Further adjust the image size */
-    }
-
-    .content {
-        padding: 15px; /* Adjust padding inside the content */
-    }
-
-}
-
-@media (max-width: 480px) {
-    .cake-description-container {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        padding: 10px; /* Minimal padding for very small screens */
-    }
-
-    .header-image {
-        width: 90%; /* Full width for header image */
-    }
-
+  .cake-description-container {
+    margin: 4rem auto 3rem;
+    padding: 15px;
+  }
+  .header-image {
+    width: 65%;
+  }
+  .content {
+    padding: 15px;
+    font-size: 15px;
+  }
 }

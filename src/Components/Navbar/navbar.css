@@ -1,103 +1,131 @@
 /* navbar.css */
 
-/* Header Styles */
+/* Header and logo styles for desktop */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding-right: 3rem;
-    background-color: var(--mainColor);
-    color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background-color: var(--mainColor);
+  color: var(--textColor);
 }
 
 .navbar-logo {
-    margin-left: 2rem;
-    width: 188px;
-    height: auto;
-    cursor: pointer;
+  margin-left: 0.5rem;
+  width: 188px;
+  height: auto;
+  cursor: pointer;
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    transition: transform 0.35s ease-in-out;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
+/* Navigation links */
 nav a {
-    font-size: 1.25rem;
-    margin-left: 2rem;
-    color: var(--textColor);
-    text-decoration: none;
-    position: relative;
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+  color: var(--textColor);
+  text-decoration: none;
+  position: relative;
 }
 
-nav a:after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 0;
-    background-color: var(--secondaryColor);
-    transition: 0.1s ease-in-out;
+/* Hover underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--secondaryColor);
+  transition: 0.1s ease-in-out;
+  left: 0;
+  bottom: -8px;
 }
 
-nav a:after {
-    left: 0;
-    bottom: -8px;
+nav a:hover::after {
+  width: 100%;
 }
 
-nav a:hover:after {
-    width: 100%;
+/* Nav toggle buttons - hidden by default */
+.nav-btn {
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--textColor);
+  font-size: 1.8rem;
+  visibility: hidden;
+  opacity: 0;
 }
 
-header .nav-btn {
-    padding: 10px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    color: var(--textColor);
-    visibility: hidden;
-    opacity: 0;
-    font-size: 1.8rem;
-    transition: visibility 0s ease-in-out 0.35s, opacity 0.35s ease-in-out;
-}
-
-/* Responsive Styles */
+/* Mobile styles */
 @media only screen and (max-width: 1024px) {
-    header .nav-btn {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0s ease-in-out 0s, opacity 0.35s ease-in-out;
-    }
+  .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.35s ease-in-out;
+  }
 
-    header nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
-        background-color: var(--mainColor);
-        z-index: 2000;
-        transform: translateY(-100vh);
-    }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background-color: var(--mainColor);
+    z-index: 2000;
+    transform: translateY(-100vh);
+    transition: transform 0.35s ease-in-out;
+    overflow: hidden;
+  }
 
-    header .responsive_nav {
-        transform: translateY(0);
-    }
+  /* Remove animation during resizing */
+  header nav[data-resizing="true"] {
+    transition: none !important;
+  }
 
-    nav .nav-close-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-    }
+  /* Slide in menu */
+  header nav[data-open="true"] {
+    transform: translateY(0);
+  }
 
-    nav a {
-        font-size: 1.5rem;
-        margin-left: 0;
-    }
+  .nav-close-btn {
+    position: absolute;
+    top: 1.9rem;
+    right: 3rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .navbar-logo {
+    width: 108px;
+  }
+
+  header {
+    height: 70px;
+    padding-right: 3rem;
+  }
+}
+
+/* Animation for fade-in effect on desktop */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media only screen and (min-width: 1025px) {
+  .fade-desktop a {
+    opacity: 0;
+    animation: fadeIn 0.35s ease-in-out forwards;
+  }
 }

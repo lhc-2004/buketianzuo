@@ -1,114 +1,103 @@
 /* homepageVideo.css */
 
-/* Container for the homepage video */
+/* Container holds video, overlay, and slogan */
 .homepageVideo {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    overflow: hidden;
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
 }
 
-/* Background video styling */
+/* Fullscreen background video */
 .homepageVideo video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none; /* Disable all interactions */
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Disable interactions */
 }
 
-/* Black overlay styling */
+/* Overlay for darkening video */
 .blackOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    opacity: 0; /* Initially invisible */
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-    z-index: 5;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  z-index: 5;
 }
 
-/* Black overlay when visible */
+/* Show overlay */
 .blackOverlay.visible {
-    visibility: visible; /* Make it visible */
-    opacity: 1; /* Fully opaque */
+  visibility: visible;
+  opacity: 1;
 }
 
-/* Slogan container */
+/* Slogan container centered over video */
 .slogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
-    color: white;
-    z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10;
 }
 
-/* Slogan image styling */
-.sloganImage {
-    width: 350px;
-    height: auto;
-}
-
-/* Slogan text when visible */
+/* Reveal slogan with slide-down effect */
 .slogan.visible {
-    opacity: 1; /* Fully visible */
-    animation: slideDownToCenter 1s ease-in-out forwards;
+  opacity: 1;
+  animation: slideDownToCenter 1s ease-in-out forwards;
 }
 
-/* Slogan text animation */
 @keyframes slideDownToCenter {
-    from {
-        transform: translate(-50%, -100%);
-    }
-    to {
-        transform: translate(-50%, -50%);
-    }
+  from { transform: translate(-50%, -100%); }
+  to   { transform: translate(-50%, -50%); }
 }
 
-/* Link to menu */
+/* Logo inside slogan */
+.sloganImage {
+  width: 350px;
+  height: auto;
+}
+
+/* Menu link styling */
 .menuLink {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Menu link hover effect */
 .menuLink:hover {
-    background-color: var(--secondaryColor);
-    color: black;
+  background-color: var(--secondaryColor);
+  color: #000;
 }
 
-/* Media query for responsiveness */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .homepageVideo {
-        height: 50vh;
-    }
-
-    .sloganImage {
-        width: 240px;
-    }
-
-    .menuLink {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .slogan {
-        font-size: 0.9rem;
-    }
+  .homepageVideo {
+    height: 68vh;
+  }
+  .sloganImage {
+    width: 240px;
+  }
+  .menuLink {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .slogan {
+    font-size: 0.9rem;
+  }
 }

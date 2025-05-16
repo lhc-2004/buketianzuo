@@ -1,153 +1,178 @@
-/* aboutPage.css */
+/* aboutPage.css - polished and optimized */
 
 .aboutUsContainer {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 10rem;
+  text-align: center;
+  margin: 1rem 0 10rem;
 }
 
 /* Title styling */
 .AboutTitle {
+  margin-top: 5rem;
+  font-size: 6rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInEffect 1s ease-out forwards;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes fadeInEffect {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.AboutTitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  bottom: -10px;
+  width: 100%;
+  max-width: 130%;
+  height: 15px;
+  background-color: var(--secondaryColor);
+  animation: growBar 1s ease-out forwards;
+  transform-origin: center;
+  box-sizing: border-box;
+}
+
+@keyframes growBar {
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+/* Story content styling */
+.storyContent {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.storyContent p {
+  margin-bottom: 3.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.storyContent .storyIcon {
+  display: block;
+  width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Promises Section */
+.promisesTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.promisesTitle .line {
+  flex-grow: 0.35;
+  height: 1px;
+  background-color: #000;
+}
+
+.promisesContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.promise {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 5rem;
+}
+
+.promise .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--secondaryColor);
+  margin: 0 auto 1rem;
+}
+
+.promise p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.promiseDescription {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.promiseIcon {
+  display: block;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .storyContent {
+    padding: 0 3rem;
+  }
+
+  .storyContent p {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .storyContent .storyIcon {
+    margin-top: 1rem;
+    width: 288px;
+    height: auto;
+  }
+
+  .promise {
+    margin: 1rem;
+  }
+
+  .AboutTitle {
     margin-top: 5rem;
-    font-size: 6rem;
+    font-size: 3rem;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInEffect 1s ease-out forwards;
     position: relative;
     display: inline-block;
-}
+  }
 
-@keyframes fadeInEffect {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  .AboutTitle::after {
+    height: 10px;
+  }
 
-.AboutTitle::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    bottom: -10px;
-    width: 100%;
-    max-width: 130%;
-    height: 15px;
-    background-color: var(--secondaryColor);
-    animation: growBar 1s ease-out forwards;
-    transform-origin: center;
-    box-sizing: border-box;
-}
-
-@keyframes growBar {
-    to {
-        transform: translateX(-50%) scaleX(1);
-    }
-}
-
-/* Story content styling */
-.storyContent {
-    margin: 2rem auto;
+  .promisesTitle {
     font-size: 1.5rem;
-    line-height: 2rem;
-    max-width: 800px;
-    color: #333;
-    text-align: center;
-    padding: 0 2rem;
-}
+  }
 
-.storyContent p {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
+  .promisesSection .promiseDescription {
+    font-size: 0.85rem;
+  }
 
-.storyContent .storyIcon {
-    margin-top: 1rem;
-    width: 350px;
-    height: auto;
-}
-
-/* Promises Section */
-.promisesTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    gap: 1rem;
-}
-
-.promisesTitle .line {
-    flex-grow: 0.35;
-    height: 1px;
-    background-color: #000;
-}
-
-.promisesContainer {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.promise {
-    text-align: center;
-    max-width: 300px;
-}
-
-.promise .circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--secondaryColor);
-    margin: 0 auto 1rem auto;
-}
-
-.promise p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
-
-.promiseDescription {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-    margin-top: 1rem;
-}
-
-/* Media query for small screens */
-@media (max-width: 768px) {
-    .storyContent {
-        padding: 0 3rem;
-    }
-
-    .storyContent p {
-        margin: 1rem 0;
-    }
-
-    .promise {
-        margin: 1rem;
-    }
-}
-
-/* Media query for very small screens */
-@media (max-width: 480px) {
-    .storyContent {
-        padding: 0 1.5rem;
-    }
-
-    .storyContent p {
-        margin: 1.5rem 0;
-    }
-
-    .promisesContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .promise {
-        margin: 1.5rem 0;
-    }
+  .promiseIcon {
+    width: 85px;
+    height: 85px;
+  }
 }

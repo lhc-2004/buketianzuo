@@ -1,66 +1,79 @@
-// HomepageVideo Component
-// This component displays a fullscreen background video with an overlay and slogan that appears near the end of the video.
-// It uses React's useRef and useEffect for video and DOM element manipulation, and includes responsive styles for smaller screens.
-
+// HomepageVideo.jsx
+// Displays a fullscreen background video with an overlay and slogan near the end
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import BakeryVideo from "../../assets/BakeryVideoToBeReplace.mp4";
-import BUKETianZuoLogo from "../../assets/BUKETianZuoLogo.png";
+import {
+  homepageVideoBakeryVideo,
+  homepageVideoBUKETianZuoLogo,
+  homepageVideoSlogan,
+} from "../../info";
 import "./homepageVideo.css";
 
-function HomepageVideo() {
-    const videoRef = useRef(null);
-    const overlayRef = useRef(null);
-    const sloganRef = useRef(null);
+export default function HomepageVideo() {
+  const videoRef = useRef(null);     // Reference to the <video> element
+  const overlayRef = useRef(null);   // Reference to the overlay div
+  const sloganRef = useRef(null);    // Reference to the slogan container
 
-    useEffect(() => {
-        const video = videoRef.current;
-        const showSloganBeforeEnd = 5; // Seconds before the video ends
+  useEffect(() => {
+    const video = videoRef.current;
+    const showSloganBeforeEnd = 5; // seconds before video end to show overlay
 
-        const handleTimeUpdate = () => {
-            if (video.currentTime >= video.duration - showSloganBeforeEnd) {
-                overlayRef.current?.classList.add("visible");
-            }
-        };
+    // When video time updates, display overlay near the end
+    const onTimeUpdate = () => {
+      if (video.currentTime >= video.duration - showSloganBeforeEnd) {
+        overlayRef.current?.classList.add("visible");
+      }
+    };
 
-        const handleOverlayTransitionEnd = () => {
-            sloganRef.current?.classList.add("visible");
-        };
+    // After overlay fades in, reveal slogan
+    const onOverlayTransitionEnd = () => {
+      sloganRef.current?.classList.add("visible");
+    };
 
-        video.addEventListener("timeupdate", handleTimeUpdate);
-        overlayRef.current?.addEventListener("transitionend", handleOverlayTransitionEnd);
+    video.addEventListener("timeupdate", onTimeUpdate);
+    overlayRef.current?.addEventListener("transitionend", onOverlayTransitionEnd);
 
-        return () => {
-            video.removeEventListener("timeupdate", handleTimeUpdate);
-            overlayRef.current?.removeEventListener("transitionend", handleOverlayTransitionEnd);
-        };
-    }, []);
+    return () => {
+      video.removeEventListener("timeupdate", onTimeUpdate);
+      overlayRef.current?.removeEventListener(
+        "transitionend",
+        onOverlayTransitionEnd
+      );
+    };
+  }, []);
 
-    return (
-        <div className="homepageVideo">
-            <video
-                ref={videoRef}
-                src={BakeryVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                disablePictureInPicture
-            />
-            <div ref={overlayRef} className="blackOverlay"></div>
-            <div ref={sloganRef} className="slogan">
-                <img src={BUKETianZuoLogo} alt="BUKE Tian Zuo Logo" className="sloganImage" />
-                <h1>布渴甜作 不止今甜</h1>
-                <Link
-                    to="/menu"
-                    className="menuLink"
-                    onClick={() => window.scrollTo(0, 0)}
-                >
-                    View Our Menu
-                </Link>
-            </div>
-        </div>
-    );
+  return (
+    <div className="homepageVideo">
+      {/* Background video */}
+      <video
+        ref={videoRef}
+        src={homepageVideoBakeryVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+        disablePictureInPicture
+      />
+
+      {/* Semi-transparent overlay that appears near video end */}
+      <div ref={overlayRef} className="blackOverlay" />
+
+      {/* Slogan and logo reveal container */}
+      <div ref={sloganRef} className="slogan">
+        <img
+          src={homepageVideoBUKETianZuoLogo}
+          alt="BUKE Tian Zuo Logo"
+          className="sloganImage"
+        />
+        <h1>{homepageVideoSlogan}</h1>
+        <Link
+          to="/menu"
+          className="menuLink"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          View Our Menu
+        </Link>
+      </div>
+    </div>
+  );
 }
-
-export default HomepageVideo;

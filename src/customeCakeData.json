@@ -25,6 +25,11 @@
       { "label": "Bear", "value": "bear" },
       { "label": "Pink Bear", "value": "pink bear" },
       { "label": "Birthday Hat Bear", "value": "birthday hat bear" }
+    ],
+    "notes": [
+      { "label": "*Note: 六寸自带一种夹心, 8寸自带两种, 多加一种夹心+$3", "value": "filling note" },
+      { "label": "*Note: 一个蛋糕配一只蜡烛 多加$4/支", "value": "candle note" },
+      { "label": "Thank you for your custom cake order! We will reach out to you shortly with confirmation.", "value": "confirmation note" }
     ]
   }
   

@@ -1,44 +1,61 @@
 /* product.css */
 
+/* Card container with smooth hover shadow transition */
 .product {
-  padding: 20px;
+  background-color: #fff;
+  padding-bottom: 3rem;
   text-align: left;
-  background-color: #ffffff;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+/* Border wrapper around product image */
+.product-border {
+  display: inline-block;
 }
 
-.product:hover .product-image {
-  box-shadow: 0 0 0 10px #e4cccc;
-  transition: 0.5s ease;
-}
-
+/* Product image with border shadow on hover */
 .product-image {
   width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: cover;
   margin-bottom: 15px;
-  transition: 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+.product:hover .product-image {
+  box-shadow: 0 0 0 7px #e4cccc;
 }
 
+/* Product name styling */
 .product-name {
-  font-size: 20px;
+  margin: 0 0 0.5rem;
+  font-size: 22px;
   font-weight: bold;
   color: #333;
-  margin: 10px 0;
-  text-align: left;
 }
 
-.product-description {
-  font-size: 16px;
+/* Product description styling */
+.product-description,
+.temp-choice {
+  margin: 0;
   color: #888;
   line-height: 1.5;
-  margin: 0;
-  text-align: left;
+}
+.product-description {
+  font-size: 20px;
+}
+.temp-choice {
+  font-size: 18px;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  .product-name {
+    font-size: 17px;
+  }
+  .product-description {
+    font-size: 16px;
+  }
+  .temp-choice {
+    font-size: 15px;
+  }
 }

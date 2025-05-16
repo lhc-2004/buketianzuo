@@ -1,34 +1,40 @@
 /* scrollingAnimation.css */
 
-/* Container for the infinite scroll effect */
+/* Wrapper hides overflow to create viewport */
+.infiniteScrollWrapper {
+  overflow: hidden;
+  width: 100%;
+  font-size: 4rem;       /* Base font size for scroll items */
+  user-select: none;     /* Prevent text selection */
+  padding-top: 0.5rem;
+}
+
+/* Flex container holding original and cloned content */
 .infiniteScroll {
-    font-size: 88px;
-    padding-block: 8px;
-    border-block: 1px solid;
-    overflow: hidden;
-    user-select: none;
-
-    --gap: 88px;
-    display: flex;
-    gap: var(--gap);
+  display: flex;
+  gap: 4rem;             /* Gap between loops */
+  will-change: transform;/* Hint browser for smooth transforms */
 }
 
-/* Style for each scrolling list */
-.infiniteScroll ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--gap);
-
-    animation: scroll 120s linear infinite;
+/* Content group for individual items */
+.scrollContent {
+  display: flex;
+  gap: 4rem;             /* Space between items */
+  white-space: nowrap;   /* Prevent line breaks */
 }
 
-/* Keyframes for the scrolling effect */
-@keyframes scroll {
-    to {
-        transform: translateX(calc(-100% - var(--gap)));
-    }
+/* Individual scroll item styling */
+.scrollItem {
+  flex: none;            /* Prevent flex growth/shrink */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infiniteScrollWrapper {
+    font-size: 3rem;     /* Reduce font size on small screens */
+  }
+  .infiniteScroll,
+  .scrollContent {
+    gap: 2rem;          /* Reduce gap */
+  }
 }

@@ -1,11 +1,11 @@
-/* Container Styling */
+/* footer.css */
+
 .footer-container {
-  text-align: center;
   position: relative;
-  border-top: 2px solid black; /* Fixed border declaration */
+  text-align: center;
+  border-top: 2px solid black;
 }
 
-/* Logo Section */
 .logo-section {
   margin: 20px 0 10px;
 }
@@ -15,7 +15,6 @@
   width: 200px;
 }
 
-/* Footer Content */
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -24,9 +23,9 @@
 
 .footer-column {
   flex: 1;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .footer-column h3 {
@@ -41,21 +40,25 @@
   font-size: 0.9rem;
 }
 
-/* Footer Bottom Section */
+/* Links in columns */
+.footer-column a,
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Bottom copyright row */
 .footer-bottom {
   margin: 35px 0 25px;
   font-size: 0.9rem;
   color: #555;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer-column {
-    text-align: center;
   }
 }

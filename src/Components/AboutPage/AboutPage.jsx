@@ -1,58 +1,69 @@
-// AboutPage Component
-// This component displays information about BUKE, including its story and promises section.
+// AboutPage.jsx
+import React from "react";
+import "./aboutPage.css";
+import {
+  aboutPageBukeStoryContent1,
+  aboutPageBukeStoryContent2,
+  aboutPageBukeStoryContent3,
+  aboutPageBukeLogo,
+  aboutPagePromise1Logo,
+  aboutPagePromise1Title,
+  aboutPagePromise1Content,
+  aboutPagePromise2Logo,
+  aboutPagePromise2Title,
+  aboutPagePromise2Content,
+  aboutPagePromise3Logo,
+  aboutPagePromise3Title,
+  aboutPagePromise3Content,
+} from "../../info";
 
-import './aboutPage.css';
-import BUKElogo from "../../assets/BUKETianZuoLogoBlack.png";
+const promises = [
+  {
+    logo: aboutPagePromise1Logo,
+    title: aboutPagePromise1Title,
+    content: aboutPagePromise1Content,
+  },
+  {
+    logo: aboutPagePromise2Logo,
+    title: aboutPagePromise2Title,
+    content: aboutPagePromise2Content,
+  },
+  {
+    logo: aboutPagePromise3Logo,
+    title: aboutPagePromise3Title,
+    content: aboutPagePromise3Content,
+  },
+];
 
-const AboutPage = () => {
-    return (
-        <div className="aboutUsContainer">
-            <h1 className="AboutTitle">BUKE's STORY</h1>
-            <div className="storyContent">
-                <p>
-                    blah blah blah blah blah blah blah blah blah blah 
-                </p>
-                <p>
-                    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-                </p>
-                <p>
-                    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-                </p>
-                <img src={BUKElogo} alt="BUKE Logo" className="storyIcon" />
+export default function AboutPage() {
+  return (
+    <div className="aboutUsContainer">
+      <h1 className="AboutTitle">BUKE's STORY</h1>
+
+      <div className="storyContent">
+        <p>{aboutPageBukeStoryContent1}</p>
+        <p>{aboutPageBukeStoryContent2}</p>
+        <p>{aboutPageBukeStoryContent3}</p>
+        <img src={aboutPageBukeLogo} alt="BUKE Logo" className="storyIcon" />
+      </div>
+
+      <section className="promisesSection">
+        <h2 className="promisesTitle">
+          <span className="line" />
+          Our Promises
+          <span className="line" />
+        </h2>
+
+        <div className="promisesContainer">
+          {promises.map(({ logo, title, content }, i) => (
+            <div className="promise" key={i}>
+              <img src={logo} alt={`Promise ${i + 1}`} className="promiseIcon" />
+              <p className="promiseTitle">{title}</p>
+              <p className="promiseDescription">{content}</p>
             </div>
-
-            <div className="promisesSection">
-                <h2 className="promisesTitle">
-                    <span className="line"></span>
-                    Our Promises
-                    <span className="line"></span>
-                </h2>
-                <div className="promisesContainer">
-                    <div className="promise">
-                        <div className="circle"></div>
-                        <p>Promise 1</p>
-                        <p className="promiseDescription">
-                            We are committed to delivering the highest quality in everything we do, ensuring excellence at every step.
-                        </p>
-                    </div>
-                    <div className="promise">
-                        <div className="circle"></div>
-                        <p>Promise 2</p>
-                        <p className="promiseDescription">
-                            Integrity is at the core of our work. We strive to build trust and transparency with everyone we serve.
-                        </p>
-                    </div>
-                    <div className="promise">
-                        <div className="circle"></div>
-                        <p>Promise 3</p>
-                        <p className="promiseDescription">
-                            Building a strong community is our mission, connecting and empowering people through shared goals.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          ))}
         </div>
-    );
-};
-
-export default AboutPage;
+      </section>
+    </div>
+  );
+}

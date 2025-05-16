@@ -1,99 +1,105 @@
-/* MenuBackground.css */
+/* menuBackground.css */
 
+/* Container and background image */
 .menu-background {
-    position: relative;
-    width: 100%;
-    height: auto;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
-.menu-background img {
-    width: 100%;
-    height: auto;
+.menu-background .background-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Semi-transparent overlay */
 .menu-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(19, 19, 19, 0.5);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.5);
+  z-index: 1;
 }
 
+/* Centered text wrapper */
 .menu-background .text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
 }
 
+/* Main title styling */
 .menu-background .centered-text {
-    color: white;
-    font-size: 3.9rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: #fff;
+  font-size: 3.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+/* Subtext with typing animation */
 .menu-background .subtext {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: normal;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid white;
-    opacity: 0;
-    visibility: hidden;
-    animation: typing 4s steps(30, end), blink 0.5s step-end 5s, hideCursor 0.5s ease 4.5s forwards;
-    animation-play-state: paused;
+  color: #fff;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  opacity: 0;
+  visibility: hidden;
+  animation: typing 4s steps(30, end),
+             blink 0.5s step-end 5s,
+             hideCursor 0.5s ease 4.5s forwards;
+  animation-play-state: paused;
 }
 
+/* Hidden state before animation starts */
 .menu-background .subtext.hidden {
-    opacity: 0;
-    visibility: hidden;
-    animation: none;
+  opacity: 0;
+  visibility: hidden;
+  animation: none;
 }
 
+/* Reveal and run animation when not hidden */
 .menu-background .subtext:not(.hidden) {
-    opacity: 1;
-    visibility: visible;
-    animation: typing 4s steps(30, end), blink 0.5s step-end 5s, hideCursor 0.5s ease 4.5s forwards;
-    animation-play-state: running;
+  opacity: 1;
+  visibility: visible;
+  animation-play-state: running;
 }
 
+/* Typing effect keyframes */
 @keyframes typing {
-    0% {
-        width: 0;
-    }
-    40% {
-        width: 50%;
-    }
-    60% {
-        width: 50%;
-    }
-    100% {
-        width: 100%;
-    }
+  0%   { width: 0; }
+  40%  { width: 50%; }
+  60%  { width: 50%; }
+  100% { width: 100%; }
 }
 
+/* Blinking cursor animation */
 @keyframes blink {
-    from {
-        border-color: white;
-    }
-    to {
-        border-color: transparent;
-    }
+  from { border-color: white; }
+  to   { border-color: transparent; }
 }
 
+/* Hide cursor after typing */
 @keyframes hideCursor {
-    from {
-        border-right-color: white;
-    }
-    to {
-        border-right-color: transparent;
-    }
+  from { border-right-color: white; }
+  to   { border-right-color: transparent; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-background .centered-text {
+    font-size: 2.5rem;
+  }
+  .menu-background .subtext {
+    font-size: 0.9rem;
+  }
 }

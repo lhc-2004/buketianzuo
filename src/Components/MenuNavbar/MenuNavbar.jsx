@@ -1,11 +1,11 @@
-// MenuNavbar Component
-// This component renders a sticky navigation bar that provides quick links to various sections of a menu.
-// It includes a responsive design and smooth scrolling behavior.
-
+// MenuNavbar.jsx
+// This component renders a sticky navigation bar for menu sections with smooth scrolling behavior
+import React from "react";
 import "./MenuNavbar.css";
 import "../../global.css";
 
-function MenuNavbar() {
+export default function MenuNavbar() {
+  // Smooth scroll to target section
   const handleScroll = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -14,40 +14,28 @@ function MenuNavbar() {
     }
   };
 
+  // List of navigation items and their section IDs
+  const navItems = [
+    { id: "cake-section", label: "[ CAKE ]" },
+    { id: "bread-section", label: "[ BREAD ]" },
+    { id: "tea-section", label: "[ TEA ]" },
+    { id: "coffee-section", label: "[ COFFEE ]" },
+  ];
+
   return (
-    <div className="sticky-navbar">
+    <nav className="sticky-navbar">
       <div className="sticky-navbar-content">
-        <a
-          className="nav-item"
-          href="#cake-section"
-          onClick={(e) => handleScroll(e, "cake-section")}
-        >
-          [ CAKE ]
-        </a>
-        <a
-          className="nav-item"
-          href="#bread-section"
-          onClick={(e) => handleScroll(e, "bread-section")}
-        >
-          [ BREAD ]
-        </a>
-        <a
-          className="nav-item"
-          href="#tea-section"
-          onClick={(e) => handleScroll(e, "tea-section")}
-        >
-          [ TEA ]
-        </a>
-        <a
-          className="nav-item"
-          href="#coffee-section"
-          onClick={(e) => handleScroll(e, "coffee-section")}
-        >
-          [ COFFEE ]
-        </a>
+        {navItems.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className="nav-item"
+            onClick={(e) => handleScroll(e, id)}
+          >
+            {label}
+          </a>
+        ))}
       </div>
-    </div>
+    </nav>
   );
 }
-
-export default MenuNavbar;
