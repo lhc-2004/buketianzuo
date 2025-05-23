@@ -60,7 +60,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 }
 
 .calendar-container {
@@ -84,6 +83,7 @@
 
 .when-label {
   font-size: 1rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -104,7 +104,8 @@
 
 .method-label {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .method-options {
@@ -299,7 +300,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
   margin: 2rem auto;
   padding: 3rem;

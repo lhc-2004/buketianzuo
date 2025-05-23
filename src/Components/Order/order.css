@@ -1,0 +1,104 @@
+/* order.css */
+.order-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-color: var(--secondaryColor);
+  color: black;
+  height: 35vh;
+  padding: 20px;
+}
+
+.order-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.split-text-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5ch;
+  overflow: hidden;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-part {
+  display: inline-block;
+  position: relative;
+}
+
+.text-part.left {
+  transform: translateX(-200%);
+  animation: slide-in-left 1s ease-out forwards;
+}
+
+.text-part.right {
+  transform: translateX(200%);
+  animation: slide-in-right 1s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-200%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(200%); }
+  to   { transform: translateX(0); }
+}
+
+.order-desc {
+  padding: 3rem 1rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #4e4d4d;
+  text-align: center;
+}
+
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding-bottom: 5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  background: var(--brand);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .split-text-container {
+    font-size: 1.75rem;
+  }
+
+  .order-desc {
+    font-size: 0.9rem;
+    margin: 0 2.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+  }
+}

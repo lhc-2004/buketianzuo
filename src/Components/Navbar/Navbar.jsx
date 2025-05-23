@@ -78,6 +78,7 @@ export default function Navbar() {
         <Link to="/custom-cake" onClick={closeIfMobile}>Custom Cake</Link>
         <Link to="/about-us" onClick={closeIfMobile}>About Us</Link>
         <Link to="/contact" onClick={closeIfMobile}>Contact</Link>
+        <Link to="/order" onClick={closeIfMobile} className="order-btn">Order Online</Link>
 
         {/* Close button for mobile nav */}
         <button className="nav-btn nav-close-btn" onClick={toggleNav} aria-label="Close navigation">

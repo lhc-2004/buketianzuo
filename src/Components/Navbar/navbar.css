@@ -129,3 +129,24 @@ nav a:hover::after {
     animation: fadeIn 0.35s ease-in-out forwards;
   }
 }
+
+.order-btn {
+  padding: 0.55rem 1rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: fill background */
+.order-btn:hover {
+  background-color: var(--secondaryColor);
+  color: black;
+  border-color: var(--secondaryColor);
+}
+
+/* Disable underline effect for order button */
+.order-btn::after {
+  display: none !important;
+}

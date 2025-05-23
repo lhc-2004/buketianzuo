@@ -1,5 +1,5 @@
 //Navbar
-import navBarBukeLogo from "/BUKELogo.png"; 
+const navBarBukeLogo = "/BUKELogo.png"; 
 
 //HomepageVideo
 import homepageVideoBakeryVideo from "./assets/BakeryVideoToBeReplace.mp4";
@@ -14,10 +14,10 @@ import menuBackgroundImage from "./assets/menuBackground.png";
 const menuBackgroundSlogan = "「甜品不止是一种食物 , 它也是一种生活方式」";
 
 //CustomeCakeForm
-import customeCakeFormModalLogo from "../public/FancyBUKELogo.png";
+const customeCakeFormModalLogo = "/FancyBUKELogo.png";
 
 //CustomeCakeDescription
-import customeCakeDescriptionLogo from "../public/FancyBUKELogo.png";
+const customeCakeDescriptionLogo = "/FancyBUKELogo.png";
 
 //AboutPage
 const aboutPageBukeStoryContent1 = "BUKE是一个充满热情和创造力的烘焙工作室，致力于为每一位顾客提供独特而美味的甜品体验。我们的故事始于对烘焙的热爱，经过多年的探索和实践，我们终于实现了这个梦想。我们相信，甜品不仅仅是一种食物，更是一种生活方式，一种表达爱的方式。";
@@ -41,8 +41,31 @@ const contactTel = "123-456-7890"
 const contactHour = "Mon–Sun 11am – 9:30pm"
 const contactAddress = "123 Random Street, Buffalo, NY 12345"
 
+//Order
+const orderDescription = "Choose your favorite platform below to get our freshly baked treats delivered right to your door.";
+const orderPlatforms = [
+  {
+    name: "Grubhub",
+    url: "https://www.grubhub.com/restaurant/molly-tea-mo-li-nai-bai-605-east-el-camino-real-sunnyvale/9909936",
+    brandColor: "#ff8000",
+    textColor: "#fff",
+  },
+  {
+    name: "DoorDash",
+    url: "https://www.doordash.com",
+    brandColor: "#ff3008",
+    textColor: "#fff",
+  },
+  {
+    name: "Hungry Panda",
+    url: "https://www.hungrypanda.co",
+    brandColor: "#ffdb00",
+    textColor: "#000",
+  }
+];
+
 //Footer 
-import footerLogo from "../public/FancyBUKELogo.png";
+const footerLogo = "/FancyBUKELogo.png";
 
 export{
     navBarBukeLogo,
@@ -79,6 +102,9 @@ export{
     contactTel,
     contactHour,
     contactAddress,
+
+    orderDescription,
+    orderPlatforms,
 
     footerLogo
 };
