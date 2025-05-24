@@ -9,6 +9,22 @@ const homepageVideoSlogan = "布渴甜作 不止今甜"
 //ScrollingAnimation
 const scrollingAnimationText = "BUKE·BAKING·STUDIO";
 
+//Featured
+import cakeImg from "./assets/BUKETianZuoLogoBlack.png";
+import breadImg from "./assets/BUKETianZuoLogoBlack.png";
+import teaImg from "./assets/BUKETianZuoLogoBlack.png";
+import coffeeImg from "./assets/BUKETianZuoLogoBlack.png";
+import riceRollImg from "./assets/BUKETianZuoLogoBlack.png";
+
+const featuredItems = [
+  { image: cakeImg, title: "Cake", description: "blah blah blah" },
+  { image: breadImg, title: "Bread", description: "blah blah blah" },
+  { image: teaImg, title: "Tea", description: "blah blah blah" },
+  { image: coffeeImg, title: "Coffee", description: "blah blah blah" },
+  { image: riceRollImg, title: "Rice Roll", description: "blah blah blah" },
+];
+
+
 //MenuBackground
 import menuBackgroundImage from "./assets/menuBackground.png";
 const menuBackgroundSlogan = "「甜品不止是一种食物 , 它也是一种生活方式」";
@@ -75,6 +91,8 @@ export{
     homepageVideoSlogan,
 
     scrollingAnimationText,
+
+    featuredItems,
 
     menuBackgroundImage,
     menuBackgroundSlogan,

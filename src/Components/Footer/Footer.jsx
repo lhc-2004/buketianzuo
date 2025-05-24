@@ -32,6 +32,11 @@ const Footer = () => {
             </Link>
           </h3>
           <p>
+            <Link to="/order" onClick={() => window.scrollTo(0, 0)}>
+              Order Online
+            </Link>
+          </p>
+          <p>
             <span className="footer-link" onClick={() => handleSectionNavigation("cake-section")}>
               Custom Cake
             </span>
