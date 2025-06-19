@@ -13,12 +13,12 @@
       "description": "Very Good Bread.",
       "products": [
         {
-          "image": "../../menuDataPic/BakeToBeReplace.jpg",
+          "image": "menuDataPic/BakeToBeReplace.jpg",
           "name": "抹茶巴斯克 | Matcha Basque",
           "description": "抹茶 Matcha / 奶油 Cream"
         },
         {
-          "image": "../../menuDataPic/BakeToBeReplace.jpg",
+          "image": "menuDataPic/BakeToBeReplace.jpg",
           "name": "Good Bread 2",
           "description": "very good"
         }
@@ -30,13 +30,13 @@
         "description": "Very Good Tea",
         "products": [
           {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "image": "menuDataPic/TeaToBeReplace.jpg",
             "name": "茉莉奶白 | Jasmine Milk Tea",
             "description": "绿茶 Green Tea / 牛奶 Milk",
             "tempChoice": "[Hot][Cold]"
           },
           {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "image": "menuDataPic/TeaToBeReplace.jpg",
             "name": "Tea 2",
             "description": "very good"
           }
@@ -48,12 +48,12 @@
         "description": "Very good Coffee",
         "products": [
           {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "image": "menuDataPic/TeaToBeReplace.jpg",
             "name": "Coffee 1",
             "description": "very good"
           },
           {
-            "image": "../../menuDataPic/TeaToBeReplace.jpg",
+            "image": "menuDataPic/TeaToBeReplace.jpg",
             "name": "Coffee 2",
             "description": "very good"
           }

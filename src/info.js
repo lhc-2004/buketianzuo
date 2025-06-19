@@ -1,5 +1,5 @@
 //Navbar
-const navBarBukeLogo = "/BUKELogo.png"; 
+const navBarBukeLogo = import.meta.env.BASE_URL + "BUKELogo.png";; 
 
 //HomepageVideo
 import homepageVideoBakeryVideo from "./assets/BakeryVideoToBeReplace.mp4";
@@ -84,7 +84,7 @@ const orderPlatforms = [
 ];
 
 //Footer 
-const footerLogo = "/FancyBUKELogo.png";
+const footerLogo = import.meta.env.BASE_URL + "FancyBUKELogo.png";
 
 export{
     navBarBukeLogo,

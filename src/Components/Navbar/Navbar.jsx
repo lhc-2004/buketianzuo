@@ -62,7 +62,7 @@ export default function Navbar() {
   return (
     <header>
       {/* Logo linking to homepage */}
-      <Link to="/">
+      <Link to="/buketianzuo/">
         <img src={navBarBukeLogo} alt="BUKE Logo" className="navbar-logo" />
       </Link>
 
@@ -73,7 +73,7 @@ export default function Navbar() {
         data-resizing={isResizing}
         className={fadeInDesktop ? "fade-desktop" : ""}
       >
-        <Link to="/" onClick={closeIfMobile}>Home</Link>
+        <Link to="/buketianzuo/" onClick={closeIfMobile}>Home</Link>
         <Link to="/menu" onClick={closeIfMobile}>Menu</Link>
         <Link to="/custom-cake" onClick={closeIfMobile}>Custom Cake</Link>
         <Link to="/about-us" onClick={closeIfMobile}>About Us</Link>
