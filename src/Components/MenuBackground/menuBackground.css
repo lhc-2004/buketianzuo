@@ -43,7 +43,7 @@
 /* Main title styling */
 .menu-background .centered-text {
   color: #fff;
-  font-size: 3.9rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -51,7 +51,7 @@
 /* Subtext with typing animation */
 .menu-background .subtext {
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   white-space: nowrap;

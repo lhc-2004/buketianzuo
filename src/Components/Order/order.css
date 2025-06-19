@@ -23,7 +23,7 @@
   justify-content: center;
   gap: 0.5ch;
   overflow: hidden;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -55,10 +55,10 @@
 
 .order-desc {
   padding: 3rem 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 500px;
   color: #4e4d4d;
   text-align: center;
 }
@@ -74,8 +74,8 @@
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;

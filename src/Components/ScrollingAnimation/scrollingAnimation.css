@@ -4,7 +4,7 @@
 .infiniteScrollWrapper {
   overflow: hidden;
   width: 100%;
-  font-size: 3.8rem;       /* Base font size for scroll items */
+  font-size: 3.2rem;       /* Base font size for scroll items */
   user-select: none;     /* Prevent text selection */
   padding-top: 0.5rem;
   border-top: 2px solid #000;    /* Added top border */

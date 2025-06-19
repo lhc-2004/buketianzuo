@@ -47,7 +47,7 @@
   color: #fff;
   transition: opacity 0.5s ease-in-out;
   z-index: 10;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 /* Reveal slogan with slide-down effect */
@@ -63,7 +63,7 @@
 
 /* Logo inside slogan */
 .sloganImage {
-  width: 300px;
+  width: 288px;
   height: auto;
 }
 
@@ -72,7 +72,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
@@ -99,6 +99,6 @@
     padding: 0.5rem 0.8rem;
   }
   .slogan {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }

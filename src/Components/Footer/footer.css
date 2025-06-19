@@ -7,12 +7,12 @@
 }
 
 .logo-section {
-  margin: 20px 0 10px;
+  margin: 15px 0 10px;
 }
 
 .footer-navbar-logo {
-  margin-top: 2rem;
-  width: 200px;
+  margin-top: 1.8rem;
+  width: 180px;
 }
 
 .footer-content {
@@ -30,14 +30,14 @@
 
 .footer-column h3 {
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .footer-column p {
-  margin: 5px 0;
-  font-size: 0.9rem;
+  margin: 4.5px 0;
+  font-size: 0.75rem;
 }
 
 /* Links in columns */
@@ -51,7 +51,7 @@
 /* Bottom copyright row */
 .footer-bottom {
   margin: 35px 0 25px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #555;
 }
 
