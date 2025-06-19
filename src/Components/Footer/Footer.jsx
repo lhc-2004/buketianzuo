@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="logo-section">
-        <Link to="/buketianzuo/" aria-label="Go to home page" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/" aria-label="Go to home page" onClick={() => window.scrollTo(0, 0)}>
           <img src={footerLogo} alt="BUKE Logo" className="footer-navbar-logo" />
         </Link>
       </div>
