@@ -80,7 +80,7 @@
 
 .promisesTitle .line {
   flex-grow: 0.35;
-  height: 1px;
+  height: 2px;
   background-color: #000;
 }
 
