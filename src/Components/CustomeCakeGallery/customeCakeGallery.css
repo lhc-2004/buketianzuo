@@ -1,0 +1,99 @@
+/* ===== Container and Title ===== */
+.cake-gallery-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 6rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  padding-top: 1.5rem;
+}
+
+/* ===== Four Corners on Title ===== */
+.gallery-title::before,
+.gallery-title::after,
+.gallery-title span::before,
+.gallery-title span::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3.5px solid black;
+}
+
+/* Top-left */
+.gallery-title::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right */
+.gallery-title::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Top-right */
+.gallery-title span::before {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom-left */
+.gallery-title span::after {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+/* ===== Gallery Grid ===== */
+.cake-gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ===== Individual Gallery Item ===== */
+.gallery-item {
+  flex: 1 1 calc(25% - 2rem);
+  max-width: calc(25% - 2rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 1000px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

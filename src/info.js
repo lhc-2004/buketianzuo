@@ -9,31 +9,28 @@ const homepageVideoSlogan = "布渴甜作 不止今甜"
 //ScrollingAnimation
 const scrollingAnimationText = "BUKE·BAKING·STUDIO";
 
-//Featured
-import cakeImg from "./assets/BUKETianZuoLogoBlack.png";
-import breadImg from "./assets/BUKETianZuoLogoBlack.png";
-import teaImg from "./assets/BUKETianZuoLogoBlack.png";
-import coffeeImg from "./assets/BUKETianZuoLogoBlack.png";
-import riceRollImg from "./assets/BUKETianZuoLogoBlack.png";
-
-const featuredItems = [
-  { image: cakeImg, title: "Cake", description: "blah blah blah" },
-  { image: breadImg, title: "Bread", description: "blah blah blah" },
-  { image: teaImg, title: "Tea", description: "blah blah blah" },
-  { image: coffeeImg, title: "Coffee", description: "blah blah blah" },
-  { image: riceRollImg, title: "Rice Roll", description: "blah blah blah" },
-];
-
-
 //MenuBackground
 import menuBackgroundImage from "./assets/menuBackground.png";
 const menuBackgroundSlogan = "「甜品不止是一种食物 , 它也是一种生活方式」";
 
-//CustomeCakeForm
-const customeCakeFormModalLogo = "/FancyBUKELogo.png";
-
 //CustomeCakeDescription
-const customeCakeDescriptionLogo = "/FancyBUKELogo.png";
+const customeCakeDescriptionContent = "我们为每一个特别的时刻提供个性化的蛋糕定制服务。无论是生日、婚礼还是周年纪念，我们都能为您打造独一无二的甜品体验。我们的蛋糕使用新鲜的食材，结合传统的烘焙技艺和现代的创意，力求为您带来独特的味觉享受。";
+
+//CustomeCakeGallery
+import cake1 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake2 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake3 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake4 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake5 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake6 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake7 from "/menuDataPic/BakeToBeReplace.jpg";
+import cake8 from "/menuDataPic/BakeToBeReplace.jpg";
+
+const customeCakeGalleryImages = [
+  cake1, cake2, cake3, cake4,
+  cake5, cake6, cake7, cake8,
+  cake8, cake8, cake8, cake8
+];
 
 //AboutPage
 const aboutPageBukeStoryContent1 = "BUKE是一个充满热情和创造力的烘焙工作室，致力于为每一位顾客提供独特而美味的甜品体验。我们的故事始于对烘焙的热爱，经过多年的探索和实践，我们终于实现了这个梦想。我们相信，甜品不仅仅是一种食物，更是一种生活方式，一种表达爱的方式。";
@@ -60,6 +57,12 @@ const contactAddress = "123 Random Street, Buffalo, NY 12345"
 //Order
 const orderDescription = "Choose your favorite platform below to get our freshly baked treats delivered right to your door.";
 const orderPlatforms = [
+  {
+    name: "Chowbus",
+    url: "https://pos.chowbus.com/online-ordering/store/JOOY-TEA-SHOPPE-5306-8th-ave/15176",
+    brandColor: "#df0051",
+    textColor: "#fff",
+  },
   {
     name: "Grubhub",
     url: "https://www.grubhub.com/restaurant/molly-tea-mo-li-nai-bai-605-east-el-camino-real-sunnyvale/9909936",
@@ -91,15 +94,13 @@ export{
     homepageVideoSlogan,
 
     scrollingAnimationText,
-
-    featuredItems,
-
+    
     menuBackgroundImage,
     menuBackgroundSlogan,
 
-    customeCakeFormModalLogo,
+    customeCakeDescriptionContent,
 
-    customeCakeDescriptionLogo,
+    customeCakeGalleryImages,
 
     aboutPageBukeStoryContent1,
     aboutPageBukeStoryContent2,

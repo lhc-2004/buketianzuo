@@ -1,11 +1,11 @@
-import CustomeCakeForm from "../Components/CustomeCakeForm/CustomeCakeForm.jsx"
-import CustomeCakeDescription from "../Components/CustomeCakeDescription/CustomeCakeDescription.jsx";
+import CustomeCakeDescription from "../Components/CustomeCakeDescription/CustomeCakeDescription";
+import CustomeCakeGallery from "../Components/CustomeCakeGallery/CustomeCakeGallery";
 
 function CustomeCake () {
     return (
         <>
-        <CustomeCakeForm/>
-        <CustomeCakeDescription/>
+            <CustomeCakeDescription />
+            <CustomeCakeGallery />
         </>
     );
 }
